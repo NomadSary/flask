@@ -1,9 +1,11 @@
-from flask import Flask, request
+from flask import Flask, render_template
+from blog.views.users import user
 
 app = Flask(__name__)
 
 
-@app.route('/<int:num>')
-def index(num: int):
-    name = request.args.get('name', None)
-    return f'Hello {num} , {name}'
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+app.register_blueprint(user, url_prefix='/users')
