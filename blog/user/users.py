@@ -14,10 +14,11 @@ def user_list():
     return render_template('user/list.html', users=USERS)
 
 
-@user.route("/<int:user_id>/")
-def user_details(user_id: int):
+@user.route("/<int:pk>/")
+# в роуте указан урл адрес для обращения
+def user_details(pk: int):
     try:
-        user_name = USERS[user_id]
+        user_name = USERS[pk]
     except KeyError:
-        raise NotFound(f"User #{user_id} doesn't exist!")
-    return render_template('user/datails.html', user_id=user_id, user_name=user_name)
+        raise NotFound(f"User #{pk} doesn't exist!")
+    return render_template('user/datails.html', user_id=pk, user_name=user_name)

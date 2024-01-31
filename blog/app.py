@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 
+from blog.articles.articles import articles
 from blog.index.index import index
 from blog.user.users import user
 
@@ -24,3 +25,5 @@ def create_app() -> Flask:
 def register_blueprint(app: Flask):
     app.register_blueprint(user)
     app.register_blueprint(index)
+    app.register_blueprint(articles)
+
