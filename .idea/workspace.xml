@@ -7,6 +7,10 @@
     <list default="true" id="2770adb8-2a36-45ab-88d7-b62291a2e636" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/user/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blog/templates/index" />
       <recent name="$PROJECT_DIR$/blog" />
     </key>
   </component>

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from werkzeug.exceptions import NotFound
 
-user = Blueprint('user', __name__)
+user = Blueprint('user', __name__, url_prefix='/users', static_folder='../static')
 USERS = {
     1: 'ALEX',
     2: 'NATALI',
@@ -20,5 +20,4 @@ def user_details(user_id: int):
         user_name = USERS[user_id]
     except KeyError:
         raise NotFound(f"User #{user_id} doesn't exist!")
-    return render_template('user/datails.html', user_id=user_id,
-                           user_name=user_name)
+    return render_template('user/datails.html', user_id=user_id, user_name=user_name)
