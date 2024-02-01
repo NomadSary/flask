@@ -1,9 +1,29 @@
-from flask import Flask, request
+from flask import Flask, render_template
 
-app = Flask(__name__)
+from blog.articles.articles import articles
+from blog.index.index import index
+from blog.user.users import user
 
 
-@app.route('/<int:num>')
-def index(num: int):
-    name = request.args.get('name', None)
-    return f'Hello {num} , {name}'
+# app = Flask(__name__)
+#
+#
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
+
+
+#
+# app.register_blueprint(user, url_prefix='/users')
+
+def create_app() -> Flask:
+    app = Flask(__name__)
+    register_blueprint(app)
+    return app
+
+
+def register_blueprint(app: Flask):
+    app.register_blueprint(user)
+    app.register_blueprint(index)
+    app.register_blueprint(articles)
+
